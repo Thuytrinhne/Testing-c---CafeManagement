@@ -1,0 +1,21 @@
+D:\HK3\LTTQ\winform code\QUẢN LÝ QUÁN CAFE-KTEAM\QuanLyQuanCafe\DTO\bin\Debug\DTO.dll
+D:\HK3\LTTQ\winform code\QUẢN LÝ QUÁN CAFE-KTEAM\QuanLyQuanCafe\DTO\bin\Debug\DTO.pdb
+D:\HK3\LTTQ\winform code\QUẢN LÝ QUÁN CAFE-KTEAM\QuanLyQuanCafe\DTO\obj\Debug\DTO.csproj.AssemblyReference.cache
+D:\HK3\LTTQ\winform code\QUẢN LÝ QUÁN CAFE-KTEAM\QuanLyQuanCafe\DTO\obj\Debug\DTO.csproj.CoreCompileInputs.cache
+D:\HK3\LTTQ\winform code\QUẢN LÝ QUÁN CAFE-KTEAM\QuanLyQuanCafe\DTO\obj\Debug\DTO.dll
+D:\HK3\LTTQ\winform code\QUẢN LÝ QUÁN CAFE-KTEAM\QuanLyQuanCafe\DTO\obj\Debug\DTO.pdb
+D:\HK5\Testing\QuanLyQuanCafe\DTO\bin\Debug\DTO.dll
+D:\HK5\Testing\QuanLyQuanCafe\DTO\bin\Debug\DTO.pdb
+D:\HK5\Testing\QuanLyQuanCafe\DTO\obj\Debug\DTO.csproj.AssemblyReference.cache
+D:\HK5\Testing\QuanLyQuanCafe\DTO\obj\Debug\DTO.csproj.CoreCompileInputs.cache
+D:\HK5\Testing\QuanLyQuanCafe\DTO\obj\Debug\DTO.dll
+D:\HK5\Testing\QuanLyQuanCafe\DTO\obj\Debug\DTO.pdb
+D:\HK5\Testing\QuanLyQuanCafe\DTO\bin\Debug\System.Configuration.ConfigurationManager.dll
+D:\HK5\Testing\QuanLyQuanCafe\DTO\bin\Debug\System.Security.AccessControl.dll
+D:\HK5\Testing\QuanLyQuanCafe\DTO\bin\Debug\System.Security.Permissions.dll
+D:\HK5\Testing\QuanLyQuanCafe\DTO\bin\Debug\System.Security.Principal.Windows.dll
+D:\HK5\Testing\QuanLyQuanCafe\DTO\bin\Debug\System.Configuration.ConfigurationManager.xml
+D:\HK5\Testing\QuanLyQuanCafe\DTO\bin\Debug\System.Security.AccessControl.xml
+D:\HK5\Testing\QuanLyQuanCafe\DTO\bin\Debug\System.Security.Permissions.xml
+D:\HK5\Testing\QuanLyQuanCafe\DTO\bin\Debug\System.Security.Principal.Windows.xml
+D:\HK5\Testing\QuanLyQuanCafe\DTO\obj\Debug\DTO.csproj.CopyComplete

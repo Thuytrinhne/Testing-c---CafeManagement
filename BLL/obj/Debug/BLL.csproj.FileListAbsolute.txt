@@ -1,0 +1,34 @@
+D:\HK3\LTTQ\winform code\QUẢN LÝ QUÁN CAFE-KTEAM\QuanLyQuanCafe\BLL\bin\Debug\BLL.dll
+D:\HK3\LTTQ\winform code\QUẢN LÝ QUÁN CAFE-KTEAM\QuanLyQuanCafe\BLL\bin\Debug\BLL.pdb
+D:\HK3\LTTQ\winform code\QUẢN LÝ QUÁN CAFE-KTEAM\QuanLyQuanCafe\BLL\bin\Debug\DAL.dll
+D:\HK3\LTTQ\winform code\QUẢN LÝ QUÁN CAFE-KTEAM\QuanLyQuanCafe\BLL\bin\Debug\DTO.dll
+D:\HK3\LTTQ\winform code\QUẢN LÝ QUÁN CAFE-KTEAM\QuanLyQuanCafe\BLL\bin\Debug\DAL.pdb
+D:\HK3\LTTQ\winform code\QUẢN LÝ QUÁN CAFE-KTEAM\QuanLyQuanCafe\BLL\bin\Debug\DAL.dll.config
+D:\HK3\LTTQ\winform code\QUẢN LÝ QUÁN CAFE-KTEAM\QuanLyQuanCafe\BLL\bin\Debug\DTO.pdb
+D:\HK3\LTTQ\winform code\QUẢN LÝ QUÁN CAFE-KTEAM\QuanLyQuanCafe\BLL\obj\Debug\BLL.csproj.AssemblyReference.cache
+D:\HK3\LTTQ\winform code\QUẢN LÝ QUÁN CAFE-KTEAM\QuanLyQuanCafe\BLL\obj\Debug\BLL.csproj.CoreCompileInputs.cache
+D:\HK3\LTTQ\winform code\QUẢN LÝ QUÁN CAFE-KTEAM\QuanLyQuanCafe\BLL\obj\Debug\BLL.csproj.CopyComplete
+D:\HK3\LTTQ\winform code\QUẢN LÝ QUÁN CAFE-KTEAM\QuanLyQuanCafe\BLL\obj\Debug\BLL.dll
+D:\HK3\LTTQ\winform code\QUẢN LÝ QUÁN CAFE-KTEAM\QuanLyQuanCafe\BLL\obj\Debug\BLL.pdb
+D:\HK3\LTTQ\winform code\QUẢN LÝ QUÁN CAFE-KTEAM\QuanLyQuanCafe\BLL\bin\Debug\BLL.dll.config
+D:\HK5\Testing\QuanLyQuanCafe\BLL\bin\Debug\BLL.dll.config
+D:\HK5\Testing\QuanLyQuanCafe\BLL\bin\Debug\BLL.dll
+D:\HK5\Testing\QuanLyQuanCafe\BLL\bin\Debug\BLL.pdb
+D:\HK5\Testing\QuanLyQuanCafe\BLL\bin\Debug\DAL.dll
+D:\HK5\Testing\QuanLyQuanCafe\BLL\bin\Debug\DTO.dll
+D:\HK5\Testing\QuanLyQuanCafe\BLL\bin\Debug\DAL.pdb
+D:\HK5\Testing\QuanLyQuanCafe\BLL\bin\Debug\DAL.dll.config
+D:\HK5\Testing\QuanLyQuanCafe\BLL\bin\Debug\DTO.pdb
+D:\HK5\Testing\QuanLyQuanCafe\BLL\obj\Debug\BLL.csproj.AssemblyReference.cache
+D:\HK5\Testing\QuanLyQuanCafe\BLL\obj\Debug\BLL.csproj.CoreCompileInputs.cache
+D:\HK5\Testing\QuanLyQuanCafe\BLL\obj\Debug\BLL.csproj.CopyComplete
+D:\HK5\Testing\QuanLyQuanCafe\BLL\obj\Debug\BLL.dll
+D:\HK5\Testing\QuanLyQuanCafe\BLL\obj\Debug\BLL.pdb
+D:\HK5\Testing\QuanLyQuanCafe\BLL\bin\Debug\System.Configuration.ConfigurationManager.dll
+D:\HK5\Testing\QuanLyQuanCafe\BLL\bin\Debug\System.Security.AccessControl.dll
+D:\HK5\Testing\QuanLyQuanCafe\BLL\bin\Debug\System.Security.Permissions.dll
+D:\HK5\Testing\QuanLyQuanCafe\BLL\bin\Debug\System.Security.Principal.Windows.dll
+D:\HK5\Testing\QuanLyQuanCafe\BLL\bin\Debug\System.Configuration.ConfigurationManager.xml
+D:\HK5\Testing\QuanLyQuanCafe\BLL\bin\Debug\System.Security.AccessControl.xml
+D:\HK5\Testing\QuanLyQuanCafe\BLL\bin\Debug\System.Security.Permissions.xml
+D:\HK5\Testing\QuanLyQuanCafe\BLL\bin\Debug\System.Security.Principal.Windows.xml
