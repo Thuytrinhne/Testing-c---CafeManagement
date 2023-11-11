@@ -9,6 +9,17 @@
         "projectUniqueName": "D:\\HK5\\Testing\\Testing-c---CafeManagement\\BLL\\BLL.csproj",
         "projectName": "BLL",
         "projectPath": "D:\\HK5\\Testing\\Testing-c---CafeManagement\\BLL\\BLL.csproj",
+        "packagesPath": "C:\\Users\\ADMIN\\.nuget\\packages\\",
+        "projectStyle": "PackagesConfig",
+        "configFilePaths": [
+          "C:\\Users\\ADMIN\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.FallbackLocation.config",
+          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
+        ],
+        "sources": {
+          "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
+          "https://api.nuget.org/v3/index.json": {}
+        },
         "frameworks": {
           "net472": {
             "projectReferences": {
@@ -20,7 +31,8 @@
               }
             }
           }
-        }
+        },
+        "packagesConfigPath": "D:\\HK5\\Testing\\Testing-c---CafeManagement\\BLL\\packages.config"
       },
       "frameworks": {
         "net472": {}
@@ -31,6 +43,17 @@
         "projectUniqueName": "D:\\HK5\\Testing\\Testing-c---CafeManagement\\DAL\\DAL.csproj",
         "projectName": "DAL",
         "projectPath": "D:\\HK5\\Testing\\Testing-c---CafeManagement\\DAL\\DAL.csproj",
+        "packagesPath": "C:\\Users\\ADMIN\\.nuget\\packages\\",
+        "projectStyle": "PackagesConfig",
+        "configFilePaths": [
+          "C:\\Users\\ADMIN\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.FallbackLocation.config",
+          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
+        ],
+        "sources": {
+          "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
+          "https://api.nuget.org/v3/index.json": {}
+        },
         "frameworks": {
           "net472": {
             "projectReferences": {
@@ -39,7 +62,8 @@
               }
             }
           }
-        }
+        },
+        "packagesConfigPath": "D:\\HK5\\Testing\\Testing-c---CafeManagement\\DAL\\packages.config"
       },
       "frameworks": {
         "net472": {}
@@ -50,11 +74,23 @@
         "projectUniqueName": "D:\\HK5\\Testing\\Testing-c---CafeManagement\\DTO\\DTO.csproj",
         "projectName": "DTO",
         "projectPath": "D:\\HK5\\Testing\\Testing-c---CafeManagement\\DTO\\DTO.csproj",
+        "packagesPath": "C:\\Users\\ADMIN\\.nuget\\packages\\",
+        "projectStyle": "PackagesConfig",
+        "configFilePaths": [
+          "C:\\Users\\ADMIN\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.FallbackLocation.config",
+          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
+        ],
+        "sources": {
+          "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
+          "https://api.nuget.org/v3/index.json": {}
+        },
         "frameworks": {
           "net472": {
             "projectReferences": {}
           }
-        }
+        },
+        "packagesConfigPath": "D:\\HK5\\Testing\\Testing-c---CafeManagement\\DTO\\packages.config"
       },
       "frameworks": {
         "net472": {}

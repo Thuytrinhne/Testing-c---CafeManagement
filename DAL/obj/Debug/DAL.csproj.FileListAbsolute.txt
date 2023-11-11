@@ -26,6 +26,7 @@ D:\HK5\Testing\QuanLyQuanCafe\DAL\bin\Debug\System.Configuration.ConfigurationMa
 D:\HK5\Testing\QuanLyQuanCafe\DAL\bin\Debug\System.Security.AccessControl.xml
 D:\HK5\Testing\QuanLyQuanCafe\DAL\bin\Debug\System.Security.Permissions.xml
 D:\HK5\Testing\QuanLyQuanCafe\DAL\bin\Debug\System.Security.Principal.Windows.xml
+<<<<<<< HEAD
 D:\HK5\Testing\Testing-c---CafeManagement\DAL\bin\Debug\DAL.dll.config
 D:\HK5\Testing\Testing-c---CafeManagement\DAL\bin\Debug\DAL.dll
 D:\HK5\Testing\Testing-c---CafeManagement\DAL\bin\Debug\DAL.pdb
@@ -88,3 +89,23 @@ D:\HK5\Testing\Testing-c---CafeManagement\DAL\obj\Debug\DAL.csproj.CoreCompileIn
 D:\HK5\Testing\Testing-c---CafeManagement\DAL\obj\Debug\DAL.csproj.CopyComplete
 D:\HK5\Testing\Testing-c---CafeManagement\DAL\obj\Debug\DAL.dll
 D:\HK5\Testing\Testing-c---CafeManagement\DAL\obj\Debug\DAL.pdb
+=======
+H:\Souce test\Testing_CafeManagement\DAL\bin\Debug\DAL.dll.config
+H:\Souce test\Testing_CafeManagement\DAL\bin\Debug\DAL.dll
+H:\Souce test\Testing_CafeManagement\DAL\bin\Debug\DAL.pdb
+H:\Souce test\Testing_CafeManagement\DAL\bin\Debug\DTO.dll
+H:\Souce test\Testing_CafeManagement\DAL\bin\Debug\System.Configuration.ConfigurationManager.dll
+H:\Souce test\Testing_CafeManagement\DAL\bin\Debug\System.Security.AccessControl.dll
+H:\Souce test\Testing_CafeManagement\DAL\bin\Debug\System.Security.Permissions.dll
+H:\Souce test\Testing_CafeManagement\DAL\bin\Debug\System.Security.Principal.Windows.dll
+H:\Souce test\Testing_CafeManagement\DAL\bin\Debug\DTO.pdb
+H:\Souce test\Testing_CafeManagement\DAL\bin\Debug\System.Configuration.ConfigurationManager.xml
+H:\Souce test\Testing_CafeManagement\DAL\bin\Debug\System.Security.AccessControl.xml
+H:\Souce test\Testing_CafeManagement\DAL\bin\Debug\System.Security.Permissions.xml
+H:\Souce test\Testing_CafeManagement\DAL\bin\Debug\System.Security.Principal.Windows.xml
+H:\Souce test\Testing_CafeManagement\DAL\obj\Debug\DAL.csproj.AssemblyReference.cache
+H:\Souce test\Testing_CafeManagement\DAL\obj\Debug\DAL.csproj.CoreCompileInputs.cache
+H:\Souce test\Testing_CafeManagement\DAL\obj\Debug\DAL.csproj.CopyComplete
+H:\Souce test\Testing_CafeManagement\DAL\obj\Debug\DAL.dll
+H:\Souce test\Testing_CafeManagement\DAL\obj\Debug\DAL.pdb
+>>>>>>> 0543136eb0d0430ba9996fe3f399aa961376e02f
