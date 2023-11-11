@@ -1,4 +1,5 @@
-﻿using DTO;
+﻿using DAL.DataProviders;
+using DTO;
 using System;
 using System.Collections.Generic;
 using System.Data;
@@ -20,13 +21,13 @@ namespace DAL
         }
         public DataTable hienThiDanhSachFoodCategory()
         {
-            string s = "select id [Mã danh mục], name [Tên danh mục] from food_category";
-            return DataProvider.Instance.excecuteQuerry(s);
+            string q = "select id [Mã danh mục], name [Tên danh mục] from food_category";
+            return CategoryDataProvider.Instance.excecuteQuerry(q);
         }
         public List<string> danhSachCategory()
         {
             string q = "select * from food_category";
-            DataTable ds = DataProvider.Instance.excecuteQuerry(q);
+            DataTable ds = CategoryDataProvider.Instance.excecuteQuerry(q);
 
             List<string> l = new List<string>();
 
@@ -47,36 +48,15 @@ namespace DAL
         {
             try
             {
-                Sql_Connection.Instance.connect();
-
-
-                Sql_Connection.Instance.openCon();
-
-                SqlCommand cmd = new SqlCommand();
-                cmd.CommandType = CommandType.Text;
-                cmd.CommandText = "insert into food_category values ( @name)";
-
-                SqlParameter parname = new SqlParameter("@name", SqlDbType.NVarChar);
-                parname.Value = name;
-
-                cmd.Parameters.Add(parname);
-
-
-
-                cmd.Connection = Sql_Connection.Instance.sqlCon;
-
-
-                if (cmd.ExecuteNonQuery() < 0)
-                {
-
-
-                    return false;
-                }
-                {
-
-
+               CategoryDTO categoryDTO  = new CategoryDTO() { Name= name};
+                string q = "insert into food_category values ( @name)";
+                bool kq = CategoryDataProvider.Instance.executeInsertQuery(q, categoryDTO);
+                if (kq)
                     return true;
-                }
+                else
+                    return false;
+
+               
             }
             catch (Exception ex)
             {
@@ -88,85 +68,45 @@ namespace DAL
        public string timNameCateGory_FoodByID(int id)
         {
             DataTable dt = new DataTable();
-            dt = DataProvider.Instance.excecuteQuerry("select * from food_category where id = " + id);
+            dt = CategoryDataProvider.Instance.excecuteQuerry("select * from food_category where id = " + id);
             DataRow dataRow = dt.Rows[0];
             return dataRow["name"].ToString().Trim();
 
 
         }
-        public bool chinhSuaRow(CategoryDTO a)
+       public bool chinhSuaRow(CategoryDTO categoryDTO)
         {
             try
             {
-                Sql_Connection.Instance.connect();
-                Sql_Connection.Instance.openCon();
-                SqlCommand cmd = new SqlCommand();
-                cmd.CommandType = CommandType.Text;
-                cmd.CommandText = "update  food_category\r\nset \r\n\tname = @name\r\nwhere id = @id";
-                cmd.Connection = Sql_Connection.Instance.sqlCon;
-
-
-                SqlParameter parid = new SqlParameter("@id", SqlDbType.Int);
-                SqlParameter parname = new SqlParameter("@name", SqlDbType.NVarChar);
-               
-                parid.Value = a.Id;
-                parname.Value = a.Name;
-               
-
-                cmd.Parameters.Add(parid);
-                cmd.Parameters.Add(parname);
                 
-
-
-
-                if (cmd.ExecuteNonQuery() < 0)
-                {
-
-
-                    return false;
-                }
-                {
+                string q = "update  food_category\r\nset \r\n\tname = @name\r\nwhere id = @id";
+                bool kq = CategoryDataProvider.Instance.executeUpdateQuery(q, categoryDTO);
+                if (kq)
                     return true;
-                }
+                else
+                    return false;
             }
             catch { throw new Exception(); }
 
         }
-        public DataTable TimKiemLoaiMonAn(string n)
+       public DataTable TimKiemLoaiMonAn(string name)
         {
-            DataTable dataTable = new DataTable();
-            Sql_Connection.Instance.openCon();
-            SqlCommand cmd = new SqlCommand();
-            cmd.CommandType = CommandType.StoredProcedure;
-            cmd.CommandText = "TimKiemLoaiMonAn";
-
-            SqlParameter p = new SqlParameter("@name", SqlDbType.NVarChar);
-            p.Value = n;
-            cmd.Parameters.Add(p);
-
-            cmd.Connection = Sql_Connection.Instance.sqlCon;
-            SqlDataAdapter adapter = new SqlDataAdapter(cmd);
-            adapter.Fill(dataTable);
-
-            return dataTable;
-
-
-
-
+           return  CategoryDataProvider.Instance.executeSearchStoreProcedure(name);
         }
-        public static bool xoaLoaiMonAn(int id)
+       public static bool xoaLoaiMonAn(int id)
         {
             try
             {
-                Sql_Connection.Instance.openCon();
-                SqlCommand cmd = new SqlCommand();
-                cmd.CommandType = CommandType.Text;
-                cmd.CommandText = "delete from food_category where id = " + id;
-                cmd.Connection = Sql_Connection.Instance.sqlCon;
-                if (cmd.ExecuteNonQuery() < 0)
-                    return false;
-                return true;
+             
 
+                string q = "delete from food_category where id = @ma";
+                bool kq = CategoryDataProvider.Instance.executeDeleteQuery(q, id);
+
+
+                if (kq)
+                    return true;
+                else
+                    return false;
 
             }
             catch

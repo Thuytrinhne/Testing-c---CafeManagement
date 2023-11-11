@@ -1,4 +1,5 @@
-﻿using DTO;
+﻿using DAL.DataProviders;
+using DTO;
 using System;
 using System.Collections.Generic;
 using System.Data;
@@ -10,7 +11,7 @@ using System.Threading.Tasks;
 
 namespace DAL 
 {
-    public class DataProvider
+    public class DataProvider 
     {
         protected DataProvider()
         {
@@ -28,7 +29,8 @@ namespace DAL
                 return instance;
             }
             private set
-            { DataProvider.instance = value; }
+            { DataProvider.instance = value;
+            }
         }
         public virtual DataTable excecuteQuerry(string q)
         {
@@ -50,7 +52,36 @@ namespace DAL
             }
 
         }
-        public  bool executeInsertQuery(string q, SqlParameter[] parameters)
+        public virtual DataTable excecuteQuerry(string q, SqlParameter[] parameters)
+        {
+            try
+            {
+                Sql_Connection.Instance.connect();
+                Sql_Connection.Instance.openCon();
+
+                SqlCommand cmd = new SqlCommand();
+                cmd.CommandType = CommandType.Text;
+                cmd.CommandText = q;
+                foreach (var param in parameters)
+                {
+                    cmd.Parameters.Add(param);
+
+                }
+                cmd.Connection = Sql_Connection.Instance.sqlCon;
+
+                DataTable data = new DataTable();
+                SqlDataAdapter adapter = new SqlDataAdapter(cmd);
+                adapter.Fill(data);
+
+                return data;
+            }
+            catch
+            {
+                throw new Exception();
+            }
+
+        }
+        public  bool executeQueryWithParameter(string q, SqlParameter[] parameters)
         {
            
                 Sql_Connection.Instance.connect();
@@ -78,20 +109,55 @@ namespace DAL
                 {
                     return true;
                 }
-            }
-        public virtual bool executeInsertQuery_Table(string q, TableDTO tableDTO)
+         }
+         public DataTable executeStoreProcedure(string storeP, SqlParameter[] parameters)
         {
-            
-                SqlParameter[] parameters = new SqlParameter[]
-                       {
-                    new SqlParameter("@name", SqlDbType.NVarChar),
-                    new SqlParameter("@status", SqlDbType.NVarChar)
-                       };
-                parameters[0].Value = tableDTO.Name;
-                parameters[1].Value = tableDTO.Status;
-                return this.executeInsertQuery(q, parameters);
-          
+            DataTable dataTable = new DataTable();
+            Sql_Connection.Instance.openCon();
+            SqlCommand cmd = new SqlCommand();
+            cmd.CommandType = CommandType.StoredProcedure;
+            cmd.CommandText = storeP;
+
+        
+            foreach (var param in parameters)
+            {
+                cmd.Parameters.Add(param);
+
+            }
+            cmd.Connection = Sql_Connection.Instance.sqlCon;
+            SqlDataAdapter adapter = new SqlDataAdapter(cmd);
+            adapter.Fill(dataTable);
+
+            return dataTable;
         }
+        public bool executeStoreProcedureNoReturnTable(string storeP, SqlParameter[] parameters)
+        {
+            DataTable dataTable = new DataTable();
+            Sql_Connection.Instance.openCon();
+            SqlCommand cmd = new SqlCommand();
+            cmd.CommandType = CommandType.StoredProcedure;
+            cmd.CommandText = storeP;
+
+
+            foreach (var param in parameters)
+            {
+                cmd.Parameters.Add(param);
+
+            }
+            cmd.Connection = Sql_Connection.Instance.sqlCon;
+            if (cmd.ExecuteNonQuery() < 0)
+            {
+                return false;
+            }
+            else
+            {
+                return true;
+            }
+
+
+        }
+
+
     }
     
 }

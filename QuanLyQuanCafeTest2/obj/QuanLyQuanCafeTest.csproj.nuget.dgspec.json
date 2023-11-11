@@ -1,22 +1,22 @@
 {
   "format": 1,
   "restore": {
-    "D:\\HK5\\Testing\\QuanLyQuanCafe\\QuanLyQuanCafeTest2\\QuanLyQuanCafeTest.csproj": {}
+    "D:\\HK5\\Testing\\Testing-c---CafeManagement\\QuanLyQuanCafeTest2\\QuanLyQuanCafeTest.csproj": {}
   },
   "projects": {
-    "D:\\HK5\\Testing\\QuanLyQuanCafe\\BLL\\BLL.csproj": {
+    "D:\\HK5\\Testing\\Testing-c---CafeManagement\\BLL\\BLL.csproj": {
       "restore": {
-        "projectUniqueName": "D:\\HK5\\Testing\\QuanLyQuanCafe\\BLL\\BLL.csproj",
+        "projectUniqueName": "D:\\HK5\\Testing\\Testing-c---CafeManagement\\BLL\\BLL.csproj",
         "projectName": "BLL",
-        "projectPath": "D:\\HK5\\Testing\\QuanLyQuanCafe\\BLL\\BLL.csproj",
+        "projectPath": "D:\\HK5\\Testing\\Testing-c---CafeManagement\\BLL\\BLL.csproj",
         "frameworks": {
           "net472": {
             "projectReferences": {
-              "D:\\HK5\\Testing\\QuanLyQuanCafe\\DAL\\DAL.csproj": {
-                "projectPath": "D:\\HK5\\Testing\\QuanLyQuanCafe\\DAL\\DAL.csproj"
+              "D:\\HK5\\Testing\\Testing-c---CafeManagement\\DAL\\DAL.csproj": {
+                "projectPath": "D:\\HK5\\Testing\\Testing-c---CafeManagement\\DAL\\DAL.csproj"
               },
-              "D:\\HK5\\Testing\\QuanLyQuanCafe\\DTO\\DTO.csproj": {
-                "projectPath": "D:\\HK5\\Testing\\QuanLyQuanCafe\\DTO\\DTO.csproj"
+              "D:\\HK5\\Testing\\Testing-c---CafeManagement\\DTO\\DTO.csproj": {
+                "projectPath": "D:\\HK5\\Testing\\Testing-c---CafeManagement\\DTO\\DTO.csproj"
               }
             }
           }
@@ -26,16 +26,16 @@
         "net472": {}
       }
     },
-    "D:\\HK5\\Testing\\QuanLyQuanCafe\\DAL\\DAL.csproj": {
+    "D:\\HK5\\Testing\\Testing-c---CafeManagement\\DAL\\DAL.csproj": {
       "restore": {
-        "projectUniqueName": "D:\\HK5\\Testing\\QuanLyQuanCafe\\DAL\\DAL.csproj",
+        "projectUniqueName": "D:\\HK5\\Testing\\Testing-c---CafeManagement\\DAL\\DAL.csproj",
         "projectName": "DAL",
-        "projectPath": "D:\\HK5\\Testing\\QuanLyQuanCafe\\DAL\\DAL.csproj",
+        "projectPath": "D:\\HK5\\Testing\\Testing-c---CafeManagement\\DAL\\DAL.csproj",
         "frameworks": {
           "net472": {
             "projectReferences": {
-              "D:\\HK5\\Testing\\QuanLyQuanCafe\\DTO\\DTO.csproj": {
-                "projectPath": "D:\\HK5\\Testing\\QuanLyQuanCafe\\DTO\\DTO.csproj"
+              "D:\\HK5\\Testing\\Testing-c---CafeManagement\\DTO\\DTO.csproj": {
+                "projectPath": "D:\\HK5\\Testing\\Testing-c---CafeManagement\\DTO\\DTO.csproj"
               }
             }
           }
@@ -45,11 +45,11 @@
         "net472": {}
       }
     },
-    "D:\\HK5\\Testing\\QuanLyQuanCafe\\DTO\\DTO.csproj": {
+    "D:\\HK5\\Testing\\Testing-c---CafeManagement\\DTO\\DTO.csproj": {
       "restore": {
-        "projectUniqueName": "D:\\HK5\\Testing\\QuanLyQuanCafe\\DTO\\DTO.csproj",
+        "projectUniqueName": "D:\\HK5\\Testing\\Testing-c---CafeManagement\\DTO\\DTO.csproj",
         "projectName": "DTO",
-        "projectPath": "D:\\HK5\\Testing\\QuanLyQuanCafe\\DTO\\DTO.csproj",
+        "projectPath": "D:\\HK5\\Testing\\Testing-c---CafeManagement\\DTO\\DTO.csproj",
         "frameworks": {
           "net472": {
             "projectReferences": {}
@@ -60,14 +60,14 @@
         "net472": {}
       }
     },
-    "D:\\HK5\\Testing\\QuanLyQuanCafe\\QuanLyQuanCafeTest2\\QuanLyQuanCafeTest.csproj": {
+    "D:\\HK5\\Testing\\Testing-c---CafeManagement\\QuanLyQuanCafeTest2\\QuanLyQuanCafeTest.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "D:\\HK5\\Testing\\QuanLyQuanCafe\\QuanLyQuanCafeTest2\\QuanLyQuanCafeTest.csproj",
+        "projectUniqueName": "D:\\HK5\\Testing\\Testing-c---CafeManagement\\QuanLyQuanCafeTest2\\QuanLyQuanCafeTest.csproj",
         "projectName": "QuanLyQuanCafeTest",
-        "projectPath": "D:\\HK5\\Testing\\QuanLyQuanCafe\\QuanLyQuanCafeTest2\\QuanLyQuanCafeTest.csproj",
+        "projectPath": "D:\\HK5\\Testing\\Testing-c---CafeManagement\\QuanLyQuanCafeTest2\\QuanLyQuanCafeTest.csproj",
         "packagesPath": "C:\\Users\\ADMIN\\.nuget\\packages\\",
-        "outputPath": "D:\\HK5\\Testing\\QuanLyQuanCafe\\QuanLyQuanCafeTest2\\obj\\",
+        "outputPath": "D:\\HK5\\Testing\\Testing-c---CafeManagement\\QuanLyQuanCafeTest2\\obj\\",
         "projectStyle": "PackageReference",
         "fallbackFolders": [
           "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"
@@ -89,14 +89,14 @@
           "net7.0": {
             "targetAlias": "net7.0",
             "projectReferences": {
-              "D:\\HK5\\Testing\\QuanLyQuanCafe\\BLL\\BLL.csproj": {
-                "projectPath": "D:\\HK5\\Testing\\QuanLyQuanCafe\\BLL\\BLL.csproj"
+              "D:\\HK5\\Testing\\Testing-c---CafeManagement\\BLL\\BLL.csproj": {
+                "projectPath": "D:\\HK5\\Testing\\Testing-c---CafeManagement\\BLL\\BLL.csproj"
               },
-              "D:\\HK5\\Testing\\QuanLyQuanCafe\\DAL\\DAL.csproj": {
-                "projectPath": "D:\\HK5\\Testing\\QuanLyQuanCafe\\DAL\\DAL.csproj"
+              "D:\\HK5\\Testing\\Testing-c---CafeManagement\\DAL\\DAL.csproj": {
+                "projectPath": "D:\\HK5\\Testing\\Testing-c---CafeManagement\\DAL\\DAL.csproj"
               },
-              "D:\\HK5\\Testing\\QuanLyQuanCafe\\DTO\\DTO.csproj": {
-                "projectPath": "D:\\HK5\\Testing\\QuanLyQuanCafe\\DTO\\DTO.csproj"
+              "D:\\HK5\\Testing\\Testing-c---CafeManagement\\DTO\\DTO.csproj": {
+                "projectPath": "D:\\HK5\\Testing\\Testing-c---CafeManagement\\DTO\\DTO.csproj"
               }
             }
           }
@@ -111,6 +111,10 @@
         "net7.0": {
           "targetAlias": "net7.0",
           "dependencies": {
+            "Microsoft.EntityFrameworkCore": {
+              "target": "Package",
+              "version": "[3.1.32, )"
+            },
             "Microsoft.NET.Test.Sdk": {
               "target": "Package",
               "version": "[17.3.2, )"

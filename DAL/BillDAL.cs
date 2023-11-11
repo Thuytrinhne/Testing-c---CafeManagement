@@ -1,4 +1,5 @@
-﻿using System;
+﻿using DAL.DataProviders;
+using System;
 using System.CodeDom;
 using System.Collections.Generic;
 using System.ComponentModel;
@@ -15,8 +16,9 @@ namespace DAL
 {
     public  class BillDAL
     {
+        protected BillDAL() { }
         private static BillDAL instance = null;
-        private BillDAL() { }
+        
 
         public static BillDAL Instance
         {
@@ -35,30 +37,11 @@ namespace DAL
 
         // tìm mã bill chưa thanh toán khi biết bàn 
 
-        public int  getUncheckBillByTable (int id)
+        public virtual int  getUncheckBillByTable (int id)
         {
-            int m = id;
             int ma;
-            Sql_Connection.Instance.connect();
-            Sql_Connection.Instance.openCon();
-
-            DataTable t = new DataTable();
-            SqlCommand cmd = new SqlCommand();
-            cmd.CommandType = CommandType.StoredProcedure;
-            cmd.CommandText = "getUncheckBillByTable";
-            cmd.Connection = Sql_Connection.Instance.sqlCon;
-
-            SqlParameter p = new SqlParameter("@ma", SqlDbType.Int);
-            p.Value = id;
-            cmd.Parameters.Add(p);
-
-
-            SqlDataAdapter adapter = new SqlDataAdapter(cmd);
-            adapter.Fill(t);
-
-
+            DataTable t = BillDataProvider.Instance.executeSearchStoreProcedure(id);
             // kiểm tra liệu có null 
-
 
             if (t.Rows.Count > 0)
             {
@@ -69,50 +52,18 @@ namespace DAL
 
             return -1;
         }
-       public bool  thucHienCheckOut(int maBan)
+       public bool thucHienCheckOut(int maBan)
         {
-
             int maBill = getUncheckBillByTable(maBan);
             if (maBill ==-1) { return false; }
-            Sql_Connection.Instance.connect();
-            Sql_Connection.Instance.openCon();
-            SqlCommand cmd = new SqlCommand();
-            cmd.CommandType = CommandType.StoredProcedure;
-            cmd.CommandText = "thucHienCheckOut";
-
-            SqlParameter par = new SqlParameter("@maBill", SqlDbType.Int);
-            par.Value = maBill;
-            cmd.Parameters.Add(par);
-
-            cmd.Connection = Sql_Connection.Instance.sqlCon;
-
-            int kq =cmd.ExecuteNonQuery();
-            if (kq < 0) return false;
-            return true;
-
+            return BillDataProvider.Instance.executeCheckoutStoreProcedure(maBill);
 
         }
        public bool themBill(int maBan)
         {
             try
             {
-
-                Sql_Connection.Instance.connect();
-                Sql_Connection.Instance.openCon();
-
-                SqlCommand cmd = new SqlCommand();
-                cmd.CommandType = CommandType.StoredProcedure;
-                cmd.CommandText = "themBill";
-
-                SqlParameter pa = new SqlParameter("@idTable", SqlDbType.Int);
-                pa.Value = maBan;
-                cmd.Parameters.Add(pa);
-
-
-
-                cmd.Connection = Sql_Connection.Instance.sqlCon;
-                int kq = cmd.ExecuteNonQuery();
-                if (kq < 0) return false; return true;
+                return BillDataProvider.Instance.executeInsertQuery(maBan);
             } catch
             {
                 return false;
@@ -121,74 +72,19 @@ namespace DAL
         }
         public bool ChuyenBan(int maBill, int maBanNew )
         {
-            Sql_Connection.Instance.connect();
-            Sql_Connection.Instance.openCon();
-
-            SqlCommand cmd = new SqlCommand();
-            cmd.CommandType = CommandType.StoredProcedure;
-            cmd.CommandText = "chuyenBan";
-
-            SqlParameter paBill = new SqlParameter("@idBill", SqlDbType.Int);
-            SqlParameter paTable = new SqlParameter("@idNew", SqlDbType.Int);
-            paTable.Value = maBanNew;
-            paBill.Value = maBill;
-            cmd.Parameters.Add(paBill);
-            cmd.Parameters.Add(paTable);
-
-
-
-            cmd.Connection = Sql_Connection.Instance.sqlCon;
-            int kq = cmd.ExecuteNonQuery();
-            if (kq < 0) return false; return true;
-
-
+            return BillDataProvider.Instance.executeMoveTableQuery(maBill, maBanNew);
         }
 
         public DataTable HienThiDoanhThu(int page, DateTime dateStart, DateTime dateEnd)
         {
-            DataTable dataTable = new DataTable();
-            Sql_Connection.Instance.openCon();
-            SqlCommand cmd = new SqlCommand();
-            cmd.CommandType = CommandType.StoredProcedure;
-            cmd.CommandText = "HienThiDoanhThuPhanTrang";
-            SqlParameter parD1 = new SqlParameter("@dateStart", SqlDbType.VarChar);
-            SqlParameter parD2 = new SqlParameter("@dateEnd", SqlDbType.VarChar);
-            SqlParameter parD3 = new SqlParameter("@page_num", SqlDbType.Int);
-
-            parD1.Value = dateStart.ToString("yyyy-MM-dd");
-            parD2.Value = dateEnd.ToString("yyyy-MM-dd")+" 23:59:59";
-            parD3.Value = page;
-            cmd.Parameters.Add(parD1);
-            cmd.Parameters.Add(parD2);
-            cmd.Parameters.Add(parD3);
-
-            cmd.Connection = Sql_Connection.Instance.sqlCon;
-            SqlDataAdapter adapter = new SqlDataAdapter(cmd);
-            adapter.Fill(dataTable);
-            return dataTable;
-
+           
+            return BillDataProvider.Instance.executeReportPaginateQuery(page, dateStart, dateEnd);
 
         }
-
         public static int  hienThiTongDanhThu(DateTime dateStart,DateTime dateEnd)
         {
-            DataTable dataTable = new DataTable();
-            Sql_Connection.Instance.openCon();
-            SqlCommand cmd = new SqlCommand();
-            cmd.CommandType = CommandType.StoredProcedure;
-            cmd.CommandText = "HienThiTongDoanhThu";
-            SqlParameter parD1 = new SqlParameter("@dateStart", SqlDbType.Date);
-            SqlParameter parD2 = new SqlParameter("@dateEnd", SqlDbType.Date);
 
-            parD1.Value = dateStart;
-            parD2.Value = dateEnd;
-            cmd.Parameters.Add(parD1);
-            cmd.Parameters.Add(parD2);
-
-            cmd.Connection = Sql_Connection.Instance.sqlCon;
-            DataTable d = new DataTable();
-            SqlDataAdapter adapter = new SqlDataAdapter(cmd);
-            adapter.Fill(d);
+            DataTable d = BillDataProvider.Instance.executeTotalReport(dateStart, dateEnd);
 
             DataRow dr = d.Rows[0];
             if ( dr.IsNull("Tổng")  )

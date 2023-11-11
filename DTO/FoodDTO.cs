@@ -23,7 +23,7 @@ namespace DTO
         public int Loai { get { return loai; } set { loai = value; } }
 
 
-
+        public FoodDTO() { }    
         public FoodDTO(int id, string ten, double gia, int loai)
         {
             this.id = id;

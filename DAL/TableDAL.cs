@@ -4,10 +4,12 @@ using System.Collections.Generic;
 using System.Data;
 using System.Data.SqlClient;
 using System.Linq;
+using System.Net.Http.Headers;
 using System.Reflection;
 using System.Runtime.InteropServices.WindowsRuntime;
 using System.Text;
 using System.Threading.Tasks;
+using DAL.DataProviders;
 using DTO;
 
 
@@ -56,18 +58,11 @@ namespace DAL
         {
             string q = "select * from table_food";
             DataTable ds =DataProvider.Instance.excecuteQuerry(q);
-
             List<string> l = new List<string>();
-
-
-
             foreach (DataRow dr in ds.Rows)
             {
                 l.Add(dr["name"].ToString().Trim());
             }
-
-
-
             return l;
 
         }
@@ -77,19 +72,16 @@ namespace DAL
             {
                
                 string q = "insert into table_food values ( @name, @status)";
-                bool kq = DataProvider.Instance.executeInsertQuery_Table(q, tableDTO);
+                bool kq = TableDataProvider.Instance.executeInsertQuery(q, tableDTO);
                 if (kq)
                     return true;
                 else
                     return false;
                 
-            }catch(Exception ex) { 
-             
-                return false;
+            }catch(Exception ex) {
+
+                throw new Exception();
             }
-           
-
-
 
 
         }
@@ -97,24 +89,15 @@ namespace DAL
         {
             try
             {
-                Sql_Connection.Instance.connect();
-                Sql_Connection.Instance.openCon();
-                SqlCommand cmd = new SqlCommand();
-                cmd.CommandType = CommandType.Text;
-                cmd.CommandText = "delete from Table_food where id = " + ma;
-                cmd.Connection = Sql_Connection.Instance.sqlCon;
+               
+                string q = "delete from Table_food where id = @ma";
+                bool kq = TableDataProvider.Instance.executeDeleteQuery(q, ma);
 
 
-
-
-
-                if (cmd.ExecuteNonQuery() < 0)
-                {
-                    return false;
-                }
-                {
+                if (kq)
                     return true;
-                }
+                else
+                    return false;
 
             }
             catch
@@ -124,41 +107,17 @@ namespace DAL
             
 
         }
-        public virtual bool chinhSuaRow (TableDTO a)
+        public virtual bool chinhSuaRow (TableDTO tableDTO)
         {
             try
             {
-                // kt naem. status trc khi truyen vao 
-                Sql_Connection.Instance.connect();
-                Sql_Connection.Instance.openCon();
-                SqlCommand cmd = new SqlCommand();
-                cmd.CommandType = CommandType.Text;
-                cmd.CommandText = "update Table_Food\r\nset \r\n\tname = @name,\r\n\tstatus = @status\r\nwhere id = @id";
-                cmd.Connection = Sql_Connection.Instance.sqlCon;
-
-
-                SqlParameter parid = new SqlParameter("@id", SqlDbType.Int);
-                SqlParameter parname = new SqlParameter("@name", SqlDbType.NVarChar);
-                SqlParameter pars = new SqlParameter("@status", SqlDbType.NVarChar);
-                parid.Value = a.Id;
-                parname.Value = a.Name;
-                pars.Value = a.Status;
-
-                cmd.Parameters.Add(parid);
-                cmd.Parameters.Add(parname);
-                cmd.Parameters.Add(pars);
-
-
-
-                if (cmd.ExecuteNonQuery() < 0)
-                {
-
-
-                    return false;
-                }
-                {
+                string q = "update Table_Food\r\nset \r\n\tname = @name,\r\n\tstatus = @status\r\nwhere id = @id";
+                bool kq = TableDataProvider.Instance.executeUpdateQuery(q, tableDTO);
+                if (kq)
                     return true;
-                }
+                else
+                    return false;
+               
             } catch { throw new Exception(); }
 
 
@@ -166,29 +125,16 @@ namespace DAL
 
         public virtual DataTable timKiemTable (string n)
         {
-            DataTable dataTable= new DataTable();
-            Sql_Connection.Instance.connect();
-            Sql_Connection.Instance.openCon();
-            SqlCommand cmd = new SqlCommand();
-            cmd.CommandType= CommandType.Text;
-            cmd.CommandText = "select id as [Mã bàn ăn] , name as [Tên bàn ăn], status as [Trạng thái] from table_food where name like '%"+n+"%'";
 
-            //SqlParameter p = new SqlParameter("@n", SqlDbType.NVarChar);
-            //p.Value = n;
-            //cmd.Parameters.Add(p);
-
-            cmd.Connection = Sql_Connection.Instance.sqlCon;
-            SqlDataAdapter adapter = new SqlDataAdapter(cmd);
-            adapter.Fill(dataTable);
-
-            return dataTable;
-
+           string q = "select id as [Mã bàn ăn] , name as [Tên bàn ăn], status as [Trạng thái] from table_food where name like '%" + n + "%'";
+           DataTable data = TableDataProvider.Instance.excecuteQuerry(q);
+            return data;
         }
 
         public virtual string timNameTableByIDTable(int idTable)
         {
             DataTable dt = new DataTable();
-            dt = DataProvider.Instance.excecuteQuerry("select * from Table_Food where id = " + idTable );
+            dt = TableDataProvider.Instance.excecuteQuerry("select * from Table_Food where id = " + idTable );
             DataRow dataRow = dt.Rows[0];
             return dataRow["name"].ToString().Trim();
 
@@ -196,7 +142,7 @@ namespace DAL
         public virtual DataTable HienThiTable()
         {
             DataTable dt = new DataTable();
-            dt = DataProvider.Instance.excecuteQuerry("select id as [Mã bàn ăn] ,name as [Tên bàn ăn] ,status as [Trạng thái]from table_food");
+            dt = TableDataProvider.Instance.excecuteQuerry("select id as [Mã bàn ăn] ,name as [Tên bàn ăn] ,status as [Trạng thái]from table_food");
             return dt;
 
         }
