@@ -19,3 +19,18 @@ D:\HK5\Testing\QuanLyQuanCafe\DTO\bin\Debug\System.Security.AccessControl.xml
 D:\HK5\Testing\QuanLyQuanCafe\DTO\bin\Debug\System.Security.Permissions.xml
 D:\HK5\Testing\QuanLyQuanCafe\DTO\bin\Debug\System.Security.Principal.Windows.xml
 D:\HK5\Testing\QuanLyQuanCafe\DTO\obj\Debug\DTO.csproj.CopyComplete
+H:\Souce test\Testing_CafeManagement\DTO\bin\Debug\DTO.dll
+H:\Souce test\Testing_CafeManagement\DTO\bin\Debug\DTO.pdb
+H:\Souce test\Testing_CafeManagement\DTO\bin\Debug\System.Configuration.ConfigurationManager.dll
+H:\Souce test\Testing_CafeManagement\DTO\bin\Debug\System.Security.AccessControl.dll
+H:\Souce test\Testing_CafeManagement\DTO\bin\Debug\System.Security.Permissions.dll
+H:\Souce test\Testing_CafeManagement\DTO\bin\Debug\System.Security.Principal.Windows.dll
+H:\Souce test\Testing_CafeManagement\DTO\bin\Debug\System.Configuration.ConfigurationManager.xml
+H:\Souce test\Testing_CafeManagement\DTO\bin\Debug\System.Security.AccessControl.xml
+H:\Souce test\Testing_CafeManagement\DTO\bin\Debug\System.Security.Permissions.xml
+H:\Souce test\Testing_CafeManagement\DTO\bin\Debug\System.Security.Principal.Windows.xml
+H:\Souce test\Testing_CafeManagement\DTO\obj\Debug\DTO.csproj.AssemblyReference.cache
+H:\Souce test\Testing_CafeManagement\DTO\obj\Debug\DTO.csproj.CoreCompileInputs.cache
+H:\Souce test\Testing_CafeManagement\DTO\obj\Debug\DTO.csproj.CopyComplete
+H:\Souce test\Testing_CafeManagement\DTO\obj\Debug\DTO.dll
+H:\Souce test\Testing_CafeManagement\DTO\obj\Debug\DTO.pdb

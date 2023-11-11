@@ -32,3 +32,24 @@ D:\HK5\Testing\QuanLyQuanCafe\BLL\bin\Debug\System.Configuration.ConfigurationMa
 D:\HK5\Testing\QuanLyQuanCafe\BLL\bin\Debug\System.Security.AccessControl.xml
 D:\HK5\Testing\QuanLyQuanCafe\BLL\bin\Debug\System.Security.Permissions.xml
 D:\HK5\Testing\QuanLyQuanCafe\BLL\bin\Debug\System.Security.Principal.Windows.xml
+H:\Souce test\Testing_CafeManagement\BLL\bin\Debug\BLL.dll.config
+H:\Souce test\Testing_CafeManagement\BLL\bin\Debug\BLL.dll
+H:\Souce test\Testing_CafeManagement\BLL\bin\Debug\BLL.pdb
+H:\Souce test\Testing_CafeManagement\BLL\bin\Debug\DAL.dll
+H:\Souce test\Testing_CafeManagement\BLL\bin\Debug\DTO.dll
+H:\Souce test\Testing_CafeManagement\BLL\bin\Debug\System.Configuration.ConfigurationManager.dll
+H:\Souce test\Testing_CafeManagement\BLL\bin\Debug\System.Security.AccessControl.dll
+H:\Souce test\Testing_CafeManagement\BLL\bin\Debug\System.Security.Permissions.dll
+H:\Souce test\Testing_CafeManagement\BLL\bin\Debug\System.Security.Principal.Windows.dll
+H:\Souce test\Testing_CafeManagement\BLL\bin\Debug\DAL.pdb
+H:\Souce test\Testing_CafeManagement\BLL\bin\Debug\DAL.dll.config
+H:\Souce test\Testing_CafeManagement\BLL\bin\Debug\DTO.pdb
+H:\Souce test\Testing_CafeManagement\BLL\bin\Debug\System.Configuration.ConfigurationManager.xml
+H:\Souce test\Testing_CafeManagement\BLL\bin\Debug\System.Security.AccessControl.xml
+H:\Souce test\Testing_CafeManagement\BLL\bin\Debug\System.Security.Permissions.xml
+H:\Souce test\Testing_CafeManagement\BLL\bin\Debug\System.Security.Principal.Windows.xml
+H:\Souce test\Testing_CafeManagement\BLL\obj\Debug\BLL.csproj.AssemblyReference.cache
+H:\Souce test\Testing_CafeManagement\BLL\obj\Debug\BLL.csproj.CoreCompileInputs.cache
+H:\Souce test\Testing_CafeManagement\BLL\obj\Debug\BLL.csproj.CopyComplete
+H:\Souce test\Testing_CafeManagement\BLL\obj\Debug\BLL.dll
+H:\Souce test\Testing_CafeManagement\BLL\obj\Debug\BLL.pdb
